@@ -38,14 +38,14 @@ function islandPerimeter(grid: number[][]): number {
   return count;
 }
 
-console.log(
-  islandPerimeter([
-    [0, 1, 0, 0],
-    [1, 1, 1, 0],
-    [0, 1, 0, 0],
-    [1, 1, 0, 0],
-  ]),
-);
+// console.log(
+//   islandPerimeter([
+//     [0, 1, 0, 0],
+//     [1, 1, 1, 0],
+//     [0, 1, 0, 0],
+//     [1, 1, 0, 0],
+//   ]),
+// );
 
-console.log(islandPerimeter([[1]]));
-console.log(islandPerimeter([[1, 0]]));
+// console.log(islandPerimeter([[1]]));
+// console.log(islandPerimeter([[1, 0]]));

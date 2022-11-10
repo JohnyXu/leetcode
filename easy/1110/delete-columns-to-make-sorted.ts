@@ -17,6 +17,6 @@ function minDeletionSize(strs: string[]): number {
   return count;
 }
 
-console.log(minDeletionSize(['cba', 'daf', 'ghi']));
-console.log(minDeletionSize(['a', 'b']));
-console.log(minDeletionSize(['zyx', 'wvu', 'tsr']));
+// console.log(minDeletionSize(['cba', 'daf', 'ghi']));
+// console.log(minDeletionSize(['a', 'b']));
+// console.log(minDeletionSize(['zyx', 'wvu', 'tsr']));
