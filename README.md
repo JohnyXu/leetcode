@@ -6,3 +6,4 @@ shortest-distance-to-a-character
 lucky-numbers-in-a-matrix
 intersection-of-two-arrays
 single-number
+intersection-of-multiple-arrays
