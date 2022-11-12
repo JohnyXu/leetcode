@@ -9,3 +9,4 @@ single-number
 intersection-of-multiple-arrays
 convert-sorted-array-to-binary-search-tree
 toeplitz-matrix
+distribute-candies
