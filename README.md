@@ -10,3 +10,5 @@ intersection-of-multiple-arrays
 convert-sorted-array-to-binary-search-tree
 toeplitz-matrix
 distribute-candies
+projection-area-of-3d-shapes
+find-the-distance-value-between-two-arrays
