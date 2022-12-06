@@ -61,8 +61,6 @@ function part1() {
   console.log(result);
 }
 
-// part1();
-
 function part2() {
   const data = fs.readFileSync(fileName, { encoding: 'utf8', flag: 'r' });
   const lines = data.split(/\r?\n/);
@@ -119,4 +117,5 @@ function part2() {
   console.log(result);
 }
 
+part1();
 part2();
