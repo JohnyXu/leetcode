@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const fileName = './Calorie-Counting.txt';
+const fileName = './Calorie-data.txt';
 function part1() {
   let datas = [];
   let group = [];
