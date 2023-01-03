@@ -120,6 +120,7 @@ function part2() {
               } else {
                 next.row = cur.row - 1;
               }
+              next.col = cur.col;
               const tailkey = `${next.row},${next.col}`;
               next.points[tailkey] = (next.points[tailkey] || 0) + 1;
             }
@@ -143,6 +144,7 @@ function part2() {
               } else {
                 next.col = cur.col - 1;
               }
+              next.row = cur.row;
               const tailkey = `${next.row},${next.col}`;
               next.points[tailkey] = (next.points[tailkey] || 0) + 1;
             }
@@ -165,6 +167,7 @@ function part2() {
               } else {
                 next.row = cur.row + 1;
               }
+              next.col = cur.col;
               const tailkey = `${next.row},${next.col}`;
               next.points[tailkey] = (next.points[tailkey] || 0) + 1;
             }
@@ -187,6 +190,7 @@ function part2() {
               } else {
                 next.col = cur.col + 1;
               }
+              next.row = cur.row;
               const tailkey = `${next.row},${next.col}`;
               next.points[tailkey] = (next.points[tailkey] || 0) + 1;
             }
@@ -198,6 +202,7 @@ function part2() {
         break;
     }
   }
+  console.log(heads);
   console.log(Object.keys(heads[heads.length - 1].points).length);
 }
 
