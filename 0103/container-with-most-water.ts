@@ -1,4 +1,4 @@
-// UNSOLVED
+// UNRESOLVED
 function maxArea(height: number[]): number {
   let mArea = 0;
   // let mid = Math.floor(height.length / 2);

@@ -1,4 +1,4 @@
-// UNSOLVED
+// UNRESOLVED
 function productExceptSelf(nums: number[]): number[] {
   let ans: number[] = [];
 
