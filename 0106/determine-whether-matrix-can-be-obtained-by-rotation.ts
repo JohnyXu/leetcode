@@ -17,57 +17,36 @@ function findRotation(mat: number[][], target: number[][]): boolean {
   }
 
   const len: number = mat.length;
-  for (let i = 0; i < len; i++) {
-    let found = false;
 
+  const finds: boolean[] = Array.from<boolean>({ length: 4 }).fill(true);
+  for (let i = 0; i < len; i++) {
     // origin
     for (let j = 0; j < len; j++) {
-      if (mat[i][j] !== target[i][j]) {
-        break;
-      }
-      if (j === len - 1) {
-        found = true;
+      if (finds[0] && mat[i][j] !== target[i][j]) {
+        finds[0] = false;
       }
     }
     // 90
-    if (!found) {
-      for (let j = 0; j < len; j++) {
-        if (mat[i][j] !== target[j][len - 1 - i]) {
-          break;
-        }
-        if (j === len - 1) {
-          found = true;
-        }
+    for (let j = 0; j < len; j++) {
+      if (finds[1] && mat[i][j] !== target[j][len - 1 - i]) {
+        finds[1] = false;
       }
     }
     // 180
-    if (!found) {
-      for (let j = 0; j < len; j++) {
-        if (mat[i][j] !== target[len - 1 - i][len - 1 - j]) {
-          break;
-        }
-        if (j === len - 1) {
-          found = true;
-        }
+    for (let j = 0; j < len; j++) {
+      if (finds[2] && mat[i][j] !== target[len - 1 - i][len - 1 - j]) {
+        finds[2] = false;
       }
     }
 
     // 270
-    if (!found) {
-      for (let j = 0; j < len; j++) {
-        if (mat[i][j] !== target[len - 1 - j][i]) {
-          break;
-        }
-        if (j === len - 1) {
-          found = true;
-        }
+    for (let j = 0; j < len; j++) {
+      if (finds[3] && mat[i][j] !== target[len - 1 - j][i]) {
+        finds[3] = false;
       }
     }
-    if (!found) {
-      return false;
-    }
   }
-  return true;
+  return finds.some((v) => v);
 }
 
 console.log(
@@ -105,6 +84,32 @@ console.log(
       [1, 1, 1],
       [0, 1, 0],
       [0, 0, 0],
+    ],
+  ),
+);
+console.log(
+  findRotation(
+    [
+      [0, 0, 0],
+      [1, 0, 0],
+      [0, 0, 1],
+    ],
+    [
+      [0, 1, 0],
+      [0, 0, 0],
+      [0, 0, 1],
+    ],
+  ),
+);
+console.log(
+  findRotation(
+    [
+      [1, 1],
+      [0, 1],
+    ],
+    [
+      [1, 1],
+      [1, 0],
     ],
   ),
 );
