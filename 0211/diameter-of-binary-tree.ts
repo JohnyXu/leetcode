@@ -20,8 +20,8 @@ function dfs(root: TreeNode | null): number {
     return 0;
   }
 
-  let leftHeight: number = diameterOfBinaryTree(root?.left);
-  let rightHeight: number = diameterOfBinaryTree(root?.right);
+  let leftHeight: number = dfs(root?.left);
+  let rightHeight: number = dfs(root?.right);
   ans = Math.max(ans, leftHeight + rightHeight);
   return 1 + Math.max(leftHeight, rightHeight);
 }
